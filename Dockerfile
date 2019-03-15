@@ -1,8 +1,7 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY package.json .
-RUN npm install -g n
-RUN sudo n 11.10.1
+RUN npm install 
 COPY . .
 RUN npm run build
 
